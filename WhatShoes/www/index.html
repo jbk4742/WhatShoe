@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Blank App</title>
+        <script
+                src="https://code.jquery.com/jquery-3.1.1.js"
+                integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+                crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <script type="text/javascript" src="cordova.js">
+        </script>
+    <div>
+        <script type="text/javascript">
+            var div = function() {
+                return new Div();
+            };
+
+            function Div() {
+                this.$ = $('<div></div>');
+            }
+
+            Div.prototype.css = function(key, value) {
+                if (arguments.length == 1) {
+                    this.$.css(key);
+                    return this;
+                }
+
+                this.$.css(key, value);
+
+                return this;
+            };
+
+            Div.prototype.attr = function(key, value) {
+                if (arguments.length == 1) {
+                    this.$.attr(key);
+                    return this;
+                }
+
+                this.$.attr(key, value);
+
+                return this;
+            };
+
+            Div.prototype.append = function() {
+                $('body').append(this.$);
+                return this;
+            };
+
+            Div.prototype.appendTo = function(target) {
+                this.$.appendTo(target.$);
+
+                return this;
+            };
+
+            Div.prototype.text = function(txt) {
+                if (txt === undefined) {
+                    return this.$.text();
+                }
+                this.$.text(txt);
+
+                return this;
+            };
+
+            Div.prototype.bgColor = function(color) {
+                this.$.css('background-color', color);
+                return this;
+            };
+
+            Div.prototype.size = function(w, h) {
+                this.$.css('width', w);
+                this.$.css('height', h);
+                return this;
+            };
+
+            Div.prototype.textAlignCenter = function() {
+                this.$.css('text-align', 'center');
+                return this;
+            };
+
+            Div.prototype.textAlignRight = function() {
+                this.textAlign('right');
+
+                return this;
+            };
+
+            Div.prototype.textAlignLeft = function(){
+                this.textAlign('left');
+
+                return this;
+            };
+
+            Div.prototype.fontSize = function(px) {
+                this.$.css('font-size', px);
+                return this;
+            };
+
+            /** margin */
+            Div.prototype.marginTop = function(px) {
+                this.$.css('margin-top', px);
+                return this;
+            };
+
+            Div.prototype.marginLeft = function(px) {
+                this.$.css('margin-left', px);
+                return this;
+            };
+
+            Div.prototype.marginRight = function(px) {
+                this.$.css('margin-right', px);
+                return this;
+            };
+
+            Div.prototype.marginBottom = function(px) {
+                this.$.css('margin-bottom', px);
+                return this;
+            };
+
+            Div.prototype.margin = function(px) {
+                this.$.css('margin', px);
+                return this;
+            };
+
+            Div.prototype.fontStyle = function(style) {
+                this.$.css('font-style', style);
+                return this;
+            };
+
+            Div.prototype.fontColor = function(c){
+                this.$.css('color',c);
+                return this;
+            };
+
+            Div.prototype.border = function(px) {
+                this.$.css('border', px + 'px solid black');
+                return this;
+            };
+
+            Div.prototype.displayBlock = function() {
+                this.$.css('display', 'block');
+                return this;
+            };
+
+            Div.prototype.displayInlineBlock = function() {
+                this.$.css('display', 'inline-block');
+                return this;
+            };
+
+            Div.prototype.fontBold = function() {
+                this.$.css('font-weight', 'bold');
+                return this;
+            };
+
+            Div.prototype.fontItalic = function() {
+                this.$.css('font-style', 'italic');
+                return this;
+            };
+
+            Div.prototype.borderDotted = function() {
+                this.$.css('border-style', 'dotted');
+                return this;
+            };
+
+            Div.prototype.width = function(v) {
+                if (v === undefined) {
+                    return this.$.css('width');
+                }
+                this.$.css('width', v);
+                return this;
+            };
+
+            Div.prototype.height = function(v) {
+                if (v === undefined) {
+                    return this.$.css('height');
+                }
+                this.$.css('height', v);
+                return this;
+            };
+
+            Div.prototype.draggable = function() {
+                this.$.draggable();
+                return this;
+            };
+
+            Div.prototype.resizable = function() {
+                this.$.resizable();
+                return this;
+            };
+
+            Div.prototype.click = function(fn) {
+                if (fn === undefined) {
+                    return this.$.click();
+                }
+
+                var that = this;
+                this.$.click(function(e) {
+                    if (fn) fn(that, e);
+                });
+                return this;
+            };
+
+            Div.prototype.hover = function(fn1, fn2) {
+                if (fn1 === undefined || fn2 === undefined) {
+                    return this.$.hover();
+                }
+
+                var that = this;
+                this.$.hover(function(e) {
+                    if (fn1) fn1(that, e);
+                }, function(e) {
+                    if (fn2) fn2(that, e);
+                });//벗어났을때
+                return this;
+            };
+
+            Div.prototype.editable = function(v) {
+                if(v === undefined) {
+                    this.$.attr('contenteditable', true);
+                    return this;
+                }
+
+                this.$.attr('contenteditable', v);
+                return this;
+            };
+
+            Div.prototype.cursorPointer = function(){
+                this.$.css('cursor','pointer');
+                return this;
+            };
+
+            Div.prototype.hoverBgColor = function(downColor, upColor){
+                if(downColor === undefined || upColor === undefined)
+                    return this;
+                var that = this;
+                this.$.hover(function(){
+                    that.bgColor(downColor);
+                }, function(){
+                    that.bgColor(upColor);
+                });
+                return this;
+            };
+
+            Div.prototype.verticalAlign = function(dx){
+                this.$.css('vertical-align',dx);
+                return this;
+            };
+
+            Div.prototype.scrollingY = function(){
+                this.$.css('overflow-y','scroll');
+                this.$.css('overflow-x','hidden');
+                return this;
+            };
+
+            $(document).ready(function() {
+                var i, imageName=['여자구두','남자구두','여자명품구두','남자명품구두','가방','벨트','지갑','ETC'];
+                var mainColor = '#eeeeee', subColor = '#cccccc';
+
+                var title = div().append('body').size('100%','50').bgColor('Brown').textAlignCenter().text('왓슈').fontSize(30).border(1).verticalAlign('top');
+
+                var content = div().append('body').size('100%','400').scrollingY();
+                var content_1 = div().appendTo(content).text('맞춤 수선소').size('50%','50').bgColor('red').displayInlineBlock().textAlignCenter().fontSize(20);
+                var content_2 = div().appendTo(content).text('맞춤 수제화').size('50%','50').bgColor('red').displayInlineBlock().textAlignCenter().fontSize(20);
+                var shoes_image = div().appendTo(content).size('100%','500').displayInlineBlock().textAlignCenter().border(1).bgColor('gray');
+                for(i=0;i<imageName.length;i++){
+                    div().appendTo(shoes_image).size('50%','125').displayInlineBlock().text(imageName[i]).fontSize(30).cursorPointer().hoverBgColor(subColor,'gray').click(function (dv) {
+                        alert(dv.text());
+                    })
+                }
+                var behind_view = div().append('body').size('100%','50').text('픽업받을 위치 선택하러 가기').bgColor('Yellow').textAlignCenter().fontSize(25).border(1).verticalAlign('down');
+            });
+
+        </script>
+    </div>
+    </body>
+</html>
