@@ -4,10 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-        
-        <script async defer
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOE99wzbk-_nJFVrawrL2HSionuh9oaWE&callback=initMap">
-        </script>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOE99wzbk-_nJFVrawrL2HSionuh9oaWE&callback=initMap"
+                async defer></script>
         <title>Blank App</title>
         <style type="text/css">
             html, body { height: 100%; margin: 0; padding: 0; }
@@ -15,7 +14,6 @@
         </style>
         <script type="text/javascript">
 
-            function fnGetCurrentPosition() {
                 if (navigator.geolocation)
                 {
                     $("#latlng").html("");
@@ -35,14 +33,13 @@
 
                         map = new google.maps.Map(document.getElementById('map'),mapOptions);
 
-                        var myIcon = new google.maps.MarkerImage('http://www.larva.re.kr/home/img/boximage3.png', null, null, null, new google.maps.Size(17,17));
+
                         var marker = new google.maps.Marker({
                             position: new google.maps.LatLng(lat,lng),
                             map: map,
                             draggable: false,
-                            icon: myIcon
                         });
-                        markers.push(marker);
+                        marker.setMap(map);
                     },function(error)
                     {
                         switch(error.code)
@@ -66,14 +63,12 @@
                 {
                     $("#errormsg").html("Geolocation is not supported by this browser.");
                 }
-            }
 
         </script>
     </head>
     <body>
         <div id="errormsg"></div>
         <div id="latlng"></div>
-        <input type="button" value="GetCurrentPosition " onclick="Javascript:fnGetCurrentPosition();" />
         <div id="map" style="width:760px;height:400px;margin-top:20px;"></div>
 
     </body>
