@@ -45,9 +45,3 @@ $("#button_login").click(function () {
     }
 });
 
-
-$("#button_signup_facebook").click(function () {
-    FB.getLoginStatus(function(response) {
-        statusChangeCallback(response);
-    });
-});

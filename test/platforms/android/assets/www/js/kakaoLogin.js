@@ -8,11 +8,12 @@ $(document).ready(function() {
             url: '/v1/user/me',
             success: function (res) {
                 alert("success");
-                $("#kakao-profile").append(res.properties.nickname);
-                $("#kakao-id").append(res.id);
-                var kakao_nick = res.properties.nickname;
-                var kakao_id = res.id;
+                $("#kakao_name").append(res.properties.nickname);
+                $("#kakao_id").append(res.id);
                 var login_method = "kakao";
+                document.getElementById("kakao_id").innerHTML = res.id;
+                document.getElementById("kakao_name").innerHTML =res.properties.nickname;
+                document.getElementById("kakao_login_form").submit();
             },
             fail: function (error) {
                 alert("error");

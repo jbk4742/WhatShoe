@@ -166,7 +166,7 @@ input.validate#input_addr, input.validate#input_phone, input.validate#input_conf
     right: 0px;
 }
 */
-#button_join {
+#button_join, #button_join_FB, #button_join_Kakao {
     background-color: white;
     color: #252525;
     border: 1px solid #252525;

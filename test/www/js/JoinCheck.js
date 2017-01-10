@@ -2,7 +2,7 @@
  * Created by byeongkwan on 2017-01-06.
  */
 
-$('#button_join').click(function () {
+$('#button_join_FB').click(function () {
 
     var check_id = document.getElementById("input_id").value;
     var check_pwd = document.getElementById("input_pwd").value;
@@ -89,3 +89,4 @@ $('#button_join').click(function () {
         check_count = 0;
     }
 });
+
