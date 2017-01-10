@@ -8,7 +8,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
         <link type="text/css" rel="stylesheet" href="css/theme_join.css" />
-        <script type="text/javascript" src="../js/materialize.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
     </head>
@@ -20,6 +20,7 @@
                 <div class="nav-wrapper">
                     <a class="back"><img src="images/back.png" width="25px"/></a>
                     <span class="brand-logo center">회원가입</span>
+                    <a href="login.html" class="login" id="login_btn"><img src="images/log_on.png" width="25px"/></a>
                 </div>
             </nav>
         </header>
@@ -40,7 +41,7 @@
 
                 <div class="join">
                     <div class="row">
-                        <form class="col s12"id="login_form" name="loginData" onsubmit="submitData();" action="http://byeongkwan.dothome.co.kr/dbConnect.php" method="post">
+                        <form class="col s12"id="join_form" name="loginData" onsubmit="submitData();" action="http://byeongkwan.dothome.co.kr/idMailCheck.php" method="post">
                             <div class="row">
                                 <div class="input-field col s8 offset-s2">
                                     <div class="input_title">이메일</div>
@@ -56,7 +57,7 @@
                             <div class="row">
                                 <div class="input-field col s8 offset-s2">
                                     <div class="input_title">아이디</div>
-                                    <input name="id" id="input_id" type="text" class="validate" placeholder="아이디를 입력해주세요." maxlength=12>
+                                    <input name="id" id="input_id" type="text" class="validate" placeholder="영문, 숫자 혼용 6~12자리" maxlength=12>
                                 </div>
                             </div>
                             <div class="row">
@@ -74,7 +75,7 @@
                             <div class="row">
                                 <div class="input-field col s8 offset-s2">
                                     <div class="input_title">핸드폰번호</div>
-                                    <input name="phone" id= "input_phone" maxlength=40 type="text" class="validate" placeholder="전화번호 입력해주세요.">
+                                    <input name="phone" id= "input_phone" maxlength=40 type="text" class="validate" placeholder="전화번호 입력해주세요.(-제외)">
                                 </div>
                             </div>
                             <div class="row">
@@ -94,7 +95,6 @@
         </div>
             <script src="js/JoinCheck.js"></script>
 
-
-            <script src="js/JoinCheck.js"></script>
+        </div>
     </body>
 </html>

@@ -47,7 +47,7 @@ html, body {
 .phone-wrapper {
     width: 100%;
     height: 100%;
-    max-width: 360px;
+    max-width: 900px;
     margin: 0 auto;
     position: relative;
     min-height: 100%;
@@ -97,15 +97,15 @@ input[type=password].invalid, input[type=password]:focus.invalid {
     box-shadow: none;
 }
 
-#input_id,
-#input_password {
+#login_id,
+#login_pw {
     border-bottom: 1.9px solid #252525;
     margin-bottom: 0px;
     height: 14px;
     text-indent: 60px;
 }
 
-input.validate#input_id, input.validate#input_password {
+input.validate#input_id, input.validate#input_pwd {
     padding-bottom: 10px;
     font-size: 14px;
     letter-spacing: -0.5px;
@@ -126,8 +126,8 @@ input.validate#input_id, input.validate#input_password {
     letter-spacing: -1px;
     color: #252525;
 }
-input#input_id.validate,
-input#input_password.validate {
+input#login_id.validate,
+input#login_pw.validate {
     padding-bottom: 12px;
     font-size: 14px;
     letter-spacing: -0.5px;
@@ -156,30 +156,33 @@ input#input_password.validate {
     font-size: 14px;
     font-family: NotoSansCJKkr-Bold;
     letter-spacing: -1px;
+    margin-bottom: 5px;
     border-radius: 0;
     box-shadow: none;
     line-height: 46px;
 }
 #button_signup_facebook,
-#button_signup_email {
+#button_signup_kakao {
     height: 46px;
-    width: 48.8%;
+    width: 100%;
     font-size: 14px;
     font-family: NotoSansCJKkr-Bold;
     letter-spacing: -1px;
     border-radius: 0;
     box-shadow: none;
     line-height: 42px;
+    margin-bottom: 5px;
     padding: 0;
 }
 #button_signup_facebook {
     background-color: #233edb;
     border: 1px solid #233edb;
-    margin-right: 2.4%;
+    margin-right: 0%;
 }
-#button_signup_email {
-    background-color: #ff0453;
-    border: 1px solid #ff0453;
+#button_signup_kakao {
+    background-color: #FFFF00;
+    border: 1px solid #FFFF00;
+    color: #252525;
 }
 
 #non-members,

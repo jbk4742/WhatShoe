@@ -59,7 +59,12 @@ html, body {
 .back img {
     width: 22px;
 }
-
+.login{
+    float: right;
+}
+a.login:hover, a.back:hover{
+    cursor: pointer;
+}
 #nav-bar{
     top: 0;
     position: fixed !important;
