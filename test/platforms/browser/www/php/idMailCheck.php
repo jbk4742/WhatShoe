@@ -24,6 +24,7 @@
            mysqli_query($link,$sql);
            mysqli_close($link);
            echo "성공";
+           //echo("<script>location.replace('/');</script>");
         }
 
 ?>

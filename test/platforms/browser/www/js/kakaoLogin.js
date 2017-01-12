@@ -10,14 +10,13 @@ $(document).ready(function() {
                 alert("success");
                 $("#kakao_name").append(res.properties.nickname);
                 $("#kakao_id").append(res.id);
-                var login_method = "kakao";
-                document.getElementById("kakao_id").innerHTML = res.id;
-                document.getElementById("kakao_name").innerHTML =res.properties.nickname;
-                document.getElementById("kakao_login_form").submit();
+                window.localStorage.kakao_id = res.id;
+                window.localStorage.kakao_name = res.properties.nickname;
+                location.href='join_Kakao.html';
             },
             fail: function (error) {
                 alert("error");
-                console.log(error);
+                console.log(error+"=============================================================");
             }
         });
     }
@@ -27,17 +26,18 @@ $(document).ready(function() {
                 persistAccessToken: true,
                 persistRefreshToken: true,
                 success: function (authObj) {
+                    alert("success1");
                     getKakaotalkUserProfile();
                     createKakaotalkLogout();
-                    alert("success1");
+
                 },
                 fail: function (err) {
-                    console.log(err);
+                    console.log(err+"==============================================================");
                     alert("error1");
                 }
             });
         });
-        $("#kakao-logged-group").prependChild($("#button_signup_kakao"));
+      //  $("#kakao-logged-group").prependChild($("#button_signup_kakao"));
     }
     if(Kakao.Auth.getRefreshToken()!=undefined&&Kakao.Auth.getRefreshToken().replace(/ /g,"")!=""){
         getKakaotalkUserProfile();

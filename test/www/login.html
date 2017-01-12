@@ -11,6 +11,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+
 </head>
 <body>
 <script type="text/javascript" src="cordova.js"></script>
@@ -49,23 +50,20 @@
                     <a href="index.html" class="waves-effect waves-light btn-large" id="button_signup" >회원가입</a>
                 </div>
                 <div class="butoon col s8 offset-s2">
-                    <a class="waves-effect waves-light btn-large" id='button_signup_facebook'>페이스북</a>
+                    <a class="waves-effect waves-light btn-large" id='button_signup_facebook' href="join_FB.html">페이스북</a>
                 </div>
                 <div class="butoon col s8 offset-s2">
-                    <a class="waves-effect waves-light btn-large" id='button_signup_kakao' >카카오톡</a>
+                    <a class="waves-effect waves-light btn-large" id='button_signup_kakao'>카카오톡</a>
                 </div>
             </div>
-                <form id="kakao_login_form" action="join_kakao.html" method="post">
                     <div id="kakao-logged-group"></div>
                     <div id="kakao_id"></div>
                     <div id="kakao_name"></div>
-                </form>
-                <form id="facebook_login_form" action="join_FB.html" method="get">
-                    <div id="status"></div>
-                    <input name="fb_id" id="fb_id">
-                    <input name="fb_name" id="fb_name"> 
 
-                </form>
+                    <div id="status"></div>
+                    <div id="fb_id"></div>
+                    <div id="fb_name"></div>
+
 
         </div>
         </div>

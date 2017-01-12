@@ -1,6 +1,16 @@
 /**
  * Created by byeongkwan on 2017-01-10.
  */
+
+var fb_id = window.localStorage.fb_id;
+var fb_name = window.localStorage.fb_name;
+var have_logInfo = 0; //이 계정의 추가정보를 디비가 가지고 있느냐 아니냐
+window.localStorage.have_logInfo = have_logInfo;
+
+document.getElementById('input_id').value = fb_id;
+document.getElementById('input_name').value = fb_name;
+
+
 $("#button_join_FB").click(function () {
     var check_email = document.getElementById('input_email').value;
     var check_phone = document.getElementById('input_phone').value;
@@ -37,7 +47,7 @@ $("#button_join_FB").click(function () {
     } else{
         check_count++;
     }
-    if(check_count == 6){
+    if(check_count == 3 ){
         document.getElementById('join_form_FB').submit();
     } else{
         check_count = 0;

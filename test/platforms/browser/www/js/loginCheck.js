@@ -2,6 +2,8 @@
  * Created by byeongkwan on 2017-01-09.
  */
 $("#button_login").click(function () {
+    alert("먹니");
+    console.log("먹니＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃ㅍㅍ");
     var check_id = document.getElementById("login_id").value;
     var check_pwd = document.getElementById("login_pw").value;
     var check_count=0;
