@@ -14,13 +14,11 @@ window.fbAsyncInit = function() {
         xfbml      : true,  // parse social plugins on this page
         version    : 'v2.8' // use graph api version 2.8
     });
-    console.log("여기는갑니까########################################################3");
     FB.getLoginStatus(function(response) {
         statusChangeCallback(response);
     });
 
 };
-console.log("여기는갑니까########################################################3");
 (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;

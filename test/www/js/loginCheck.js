@@ -40,7 +40,6 @@ $("#button_login").click(function () {
     }//비밀번호 유효성 검사
     if(check_count==2){
         window.localStorage.setItem("loginCheck",1); //1 : 오리지널, 2 : 페이스북, 3 : 카카오톡 로그인
-        alert(window.localStorage.getItem("loginCheck"));
         document.getElementById('login_form').submit();
     } else{
         alert("로그인 실패!");

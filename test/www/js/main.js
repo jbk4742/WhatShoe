@@ -2,7 +2,6 @@
  * Created by byeongkwan on 2017-01-16.
  */
 var loginCheck = window.localStorage.getItem("loginCheck");
-alert(loginCheck);
 $('#logout_btn').click(function() {
     if(loginCheck == 1){
         alert("로그아웃 되었습니다!");
@@ -34,8 +33,30 @@ $('#logout_btn').click(function() {
         location.href="login.html";
     }
 });
-$('#main_bag').click(function() {
+$('#dialog').dialog({
+    title:'다이얼로그',
+    autoOpen:false,
+    width:600,
+    modal:true,
+    backgroundColor: '#252525',
+    buttons:[
+        {
+            text: "등록",
+            click: function() {
+                document.getElementById('test_form').submit();
+            }
+        }, {
+            text: "닫기",
+            click: function () {
+                $(this).dialog("close");
+            }
+        }
 
+    ]
+
+});
+$('#main_bag').click(function() {
+    $("#dialog").dialog("open");
 });
 $('#main_etc').click(function() {
 
