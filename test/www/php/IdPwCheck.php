@@ -2,6 +2,7 @@
     include("dbConnect.php");
     $id= $_POST['login_id'];
     $pwd= $_POST['login_pw'];
+    mysqli_query($link,"set names utf8");
     echo "id: ".$id."이다";
     echo $pwd;
 
@@ -9,7 +10,8 @@
     $sql = mysqli_query($link,$sql);
     $sql = mysqli_num_rows($sql);
     if($sql){
-        echo "성공";
+    echo("<script>location.replace('http://byeongkwan.dothome.co.kr/main.html');</script>");
+        echo "성공1";
     } else{
         echo "실패";
     }

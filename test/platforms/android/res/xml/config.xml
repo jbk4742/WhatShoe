@@ -6,9 +6,6 @@
     <feature name="NetworkStatus">
         <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
     </feature>
-    <feature name="Contacts">
-        <param name="android-package" value="org.apache.cordova.contacts.ContactManager" />
-    </feature>
     <feature name="InAppBrowser">
         <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
     </feature>
@@ -30,10 +27,21 @@
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
-    <feature name="SplashScreen">
-        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+    <feature name="FacebookConnectPlugin">
+        <param name="android-package" value="org.apache.cordova.facebook.ConnectPlugin" />
         <param name="onload" value="true" />
     </feature>
+    <access origin="https://m.facebook.com" />
+    <access origin="https://graph.facebook.com" />
+    <access origin="https://api.facebook.com" />
+    <access origin="https://*.fbcdn.net" />
+    <access origin="https://*.akamaihd.net" />
+    <feature name="KakaoTalk">
+        <param name="android-package" value="com.htj.plugin.kakao.KakaoTalk" />
+    </feature>
+    <access origin="https://*.kakao.com" />
+    <access origin="https://*.kakao.co.kr" />
+    <access origin="https://*.kakaocdn.net" />
     <name>test</name>
     <description>
         A blank PhoneGap app.
@@ -44,4 +52,5 @@
     <content src="index.html" />
     <access origin="*" />
     <preference name="loglevel" value="DEBUG" />
+    <preference name="android-minSdkVersion" value="15" />
 </widget>

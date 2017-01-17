@@ -7,6 +7,7 @@ var kakao_name = window.localStorage.kakao_name;
 document.getElementById('input_id').value = kakao_id;
 document.getElementById('input_name').value = kakao_name;
 
+
 $("#button_join_Kakao").click(function () {
     var check_email = document.getElementById('input_email').value;
     var check_phone = document.getElementById('input_phone').value;

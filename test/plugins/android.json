@@ -7,43 +7,13 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-device-motion": {
+        "cordova-plugin-facebook4": {
+            "APP_ID": "123456789",
+            "APP_NAME": "myApplication",
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
-        "cordova-plugin-network-information": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
-        "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
-        "cordova-plugin-contacts": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
-        "cordova-plugin-inappbrowser": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
-        "cordova-plugin-file-transfer": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
-        "cordova-plugin-file": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
-        "cordova-plugin-media-capture": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
-        "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
-        "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
-        "cordova-plugin-wkwebview-engine": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
-        "cordova-plugin-compat": {
+        "cordova-plugin-htj-kakaotalk": {
+            "KAKAO_APP_KEY": "1354531609e350fbd024b14f61d98d54",
             "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     },

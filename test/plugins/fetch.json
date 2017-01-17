@@ -1,34 +1,10 @@
 {
-    "cordova-plugin-device-motion": {
+    "cordova-plugin-file": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-device-motion"
+            "id": "cordova-plugin-file"
         },
-        "is_top_level": true,
-        "variables": {}
-    },
-    "cordova-plugin-network-information": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-network-information"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
-    "cordova-plugin-console": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-console"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
-    "cordova-plugin-contacts": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-contacts"
-        },
-        "is_top_level": true,
+        "is_top_level": false,
         "variables": {}
     },
     "cordova-plugin-compat": {
@@ -36,37 +12,13 @@
             "type": "registry",
             "id": "cordova-plugin-compat"
         },
-        "is_top_level": true,
+        "is_top_level": false,
         "variables": {}
     },
-    "cordova-plugin-inappbrowser": {
+    "cordova-plugin-contacts": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-inappbrowser@1.6.1"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
-    "cordova-plugin-file-transfer": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-file-transfer"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
-    "cordova-plugin-file": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-file"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
-    "cordova-plugin-media-capture": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-media-capture"
+            "id": "cordova-plugin-contacts"
         },
         "is_top_level": true,
         "variables": {}
@@ -79,6 +31,14 @@
         "is_top_level": true,
         "variables": {}
     },
+    "cordova-plugin-inappbrowser": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-inappbrowser@1.6.1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
     "cordova-plugin-device": {
         "source": {
             "type": "registry",
@@ -87,18 +47,76 @@
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-plugin-splashscreen": {
+    "cordova-plugin-network-information": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-splashscreen@4.0.1"
+            "id": "cordova-plugin-network-information"
         },
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-plugin-wkwebview-engine": {
+    "cordova-plugin-facebookconnect-orlando": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-wkwebview-engine"
+            "id": "cordova-plugin-facebookconnect-orlando@0.11.0"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-facebook": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-facebook"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "pros.cordova.facebook": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-pros-facebook"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-facebook4": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-facebook4"
+        },
+        "is_top_level": true,
+        "variables": {
+            "APP_ID": "123456789",
+            "APP_NAME": "myApplication"
+        }
+    },
+    "phonegap-facebook-plugin": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/phonegap/phonegap-facebook-plugin.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {
+            "APP_ID": "1880283602207592",
+            "APP_NAME": "myApplication"
+        }
+    },
+    "cordova-plugin-htj-kakaotalk": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/taejaehan/cordova-kakaotalk.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {
+            "KAKAO_APP_KEY": "1354531609e350fbd024b14f61d98d54"
+        }
+    },
+    "cordova-plugin-media": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-media"
         },
         "is_top_level": true,
         "variables": {}

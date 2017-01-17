@@ -1,5 +1,6 @@
 <?php
         include("dbConnect.php");
+        mysqli_query($link,"set names utf8");
         $email= $_POST['email'];
         $name= $_POST['name'];
         $id= $_POST['id'];
@@ -11,6 +12,7 @@
 
                 if(mysqli_query($link,$sql) ){
                     echo '성공';
+                    echo("<script>location.replace('http://byeongkwan.dothome.co.kr/main.html');</script>");
                     mysqli_close($link);
                     } else{
                             echo  mysqli_error($link);

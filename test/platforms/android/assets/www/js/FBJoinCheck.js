@@ -1,7 +1,6 @@
 /**
  * Created by byeongkwan on 2017-01-10.
  */
-
 var fb_id = window.localStorage.fb_id;
 var fb_name = window.localStorage.fb_name;
 var have_logInfo = 0; //이 계정의 추가정보를 디비가 가지고 있느냐 아니냐
