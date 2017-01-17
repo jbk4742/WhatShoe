@@ -10,6 +10,14 @@ $('#logout_btn').click(function() {
         location.href="login.html";
     } else if(loginCheck == 2){
 
+        FB.logout(function(data){
+            alert("페이스북로그아웃?");
+            if(data){
+                window.localStorage.loginCheck = 0;
+                location.href="login.html";
+            }
+        });
+
     } else if(loginCheck == 3){
 
                 Kakao.Auth.logout(function(data){
