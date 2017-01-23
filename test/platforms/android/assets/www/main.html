@@ -6,41 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>login성공</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="css/theme_main.css" />
+    <link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/ui-darkness/jquery-ui.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/asdf.js"></script>
     <script src="js/kakaoLogin.js"></script>
+    <script src="js/facebookLogin.js"></script>
 </head>
 <body>
 <script type="text/javascript" src="cordova.js"></script>
 <div class="phone-wrapper">
     <div class="phone-body">
+
         <div class="row">
             <h3> 메인화면 </h3>
         </div>
-         <div class="row" style="margin-bottom: 4px">
-                <div class="butoon col s8 offset-s2">
+         <div class="row" style="margin-bottom: 10px">
+             <center>
+                <div class="button" >
                     <a  class="waves-effect waves-light btn-large" id="logout_btn" >로그아웃</a>
                 </div>
-                <div class="butoon col s8 offset-s2">
+                <div class="button">
                     <a  class="waves-effect waves-light btn-large" id="main_Mshoe" >남자구두</a>
                 </div>
-                <div class="butoon col s8 offset-s2">
+                <div class="button">
                     <a  class="waves-effect waves-light btn-large" id="main_Sshoe" >여자구두</a>
                 </div>
-                <div class="butoon col s8 offset-s2">
-                    <a  class="waves-effect waves-light btn-large" id="main_bag" >가방</a>
+                <div class="button">
+                    <a  class="waves-effect waves-light btn-large" id="main_bag" >여자가방</a>
                 </div>
-                <div class="butoon col s8 offset-s2">
-                    <a  class="waves-effect waves-light btn-large" id="main_etc" >etc</a>
+                <div class="button">
+                    <a  class="waves-effect waves-light btn-large" id="main_etc" >기타등등</a>
                 </div>
+             </center>
         </div>
         </div>
+    <div id="dialog" title="Create new user">
+        <p class="validateTips">All form fields are required.</p>
+
+        <form action="http://byeongkwan.dothome.co.kr/php/shoppingDB.php" id="test_form" method="post" name="main_form">
+
+            <fieldset>
+                <input type="text" id="main_id" name="main_id" style="display:none;" onclick="check()">
+                <label for="a">샤넬</label>
+                <input type="checkbox" name="checkbox" id="a"  value="샤넬" class="text ui-widget-content ui-corner-all" onclick="check()">
+                <label for="b">루이까또즈</label>
+                <input type="checkbox" name="checkbox" id="b"  value="루이까또즈" class="text ui-widget-content ui-corner-all" onclick="check()">
+                <label for="c">버버리</label>
+                <input type="checkbox" name="checkbox" id="c"  value="버버리" class="text ui-widget-content ui-corner-all" onclick="check()">
+                <label for="d">닥스</label>
+                <input type="checkbox" name="checkbox" id="d"  value="닥스" class="text ui-widget-content ui-corner-all" onclick="check()">
+
+                <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+            </fieldset>
+        </form>
+    </div>
     </div>
 </div>
-
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

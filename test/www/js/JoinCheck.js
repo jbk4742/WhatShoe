@@ -74,7 +74,7 @@ $('#button_join').click(function () {
             alert("전화번호 형식이 올바르지 않습니다.");
             return false;
         } else{
-                check_count++;
+            check_count++;
         }
     }
     if(!check_addr){

@@ -3,8 +3,6 @@
     $id= $_POST['login_id'];
     $pwd= $_POST['login_pw'];
     mysqli_query($link,"set names utf8");
-    echo "id: ".$id."이다";
-    echo $pwd;
 
     $sql = "SELECT * FROM LoginInfo WHERE _id='$id'AND _pwd='$pwd';";
     $sql = mysqli_query($link,$sql);

@@ -20,7 +20,7 @@
         {
             echo "아이디 또는 이메일 중복이 있습니다";
         } else {
-           $sql = "INSERT INTO LoginInfo (_id,_name,_pwd,_addr,_mail,_phone) VALUES ('$id','$name','$pwd','$addr','$email','$phone');";
+           $sql = "INSERT INTO LoginInfo (_id,_name,_pwd,_addr,_mail,_phone, _logMethod) VALUES ('$id','$name','$pwd','$addr','$email','$phone', 'original');";
            mysqli_query($link,$sql);
            mysqli_close($link);
            echo "성공";

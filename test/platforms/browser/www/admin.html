@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+</head>
+<body>
+<?php
+    include("php/adminDB.php");
+    for($j = 0 ; $j< $i; $j++){
+?>
+    <div>
+        <a  id="<?php echo "_id".$j; ?>">
+            <?php
+                echo $id[$j], $product[$j];
+            ?>
+    </a>
+    </div>
+<?php
+    }
+?>
+<form id="admin_form" action="php/admin_list.php" method="post">
+    <input type="text" name="admin_id" style="display: none" id="admin_id">
+    <input type="text" name="admin_pro" style="display: none" id="admin_pro">
+</form>
+<script type="text/javascript">
+    <?php
+        for($j=0 ; $j< $i; $j++){
+        ?>
+            $('#_id<?php echo $j?>').click(function () {
+                window.localStorage.id<?php echo $j?> = "<?php echo $id[$j]?>";
+                window.localStorage.product<?php echo $j?> = "<?php echo $product[$j]?>";
+                document.getElementById('admin_id').value = window.localStorage.id<?php echo $j?>;
+                document.getElementById('admin_pro').value = window.localStorage.product<?php echo $j?>;
+                alert(document.getElementById('admin_id').value);
+                document.getElementById('admin_form').submit();
+            });
+    <?php
+        }
+                ?>
+
+
+</script>
+<script type="text/javascript">
+    $('#test01').click(function() {
+        alert("dddd");
+        console.log("여기가나");
+    })
+</script>
+</body>
+</html>

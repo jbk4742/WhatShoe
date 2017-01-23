@@ -2,6 +2,13 @@
  * Created by byeongkwan on 2017-01-16.
  */
 var loginCheck = window.localStorage.getItem("loginCheck");
+if(loginCheck == 1){
+    document.getElementById('main_id').value = window.localStorage._id;
+} else if(loginCheck == 2){
+    document.getElementById('main_id').value = window.localStorage.fb_id;
+} else if(loginCheck == 3) {
+    document.getElementById('main_id').value = window.localStorage.kakao_id;
+}
 $('#logout_btn').click(function() {
     if(loginCheck == 1){
         alert("로그아웃 되었습니다!");
@@ -67,3 +74,14 @@ $('#main_Mshoe').click(function() {
 $('#main_Sshoe').click(function() {
 
 });
+function check() {
+    var form = document.main_form;
+    var chkBox = form.checkbox;
+    for(var i=0; i<chkBox.length;i++){
+        if(chkBox[i].checked){
+            window.localStorage.setItem("item"+i,i+1);
+        } else{
+            window.localStorage.setItem("item"+i,0);
+        }
+    }
+}

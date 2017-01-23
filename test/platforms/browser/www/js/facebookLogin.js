@@ -14,13 +14,11 @@ window.fbAsyncInit = function() {
         xfbml      : true,  // parse social plugins on this page
         version    : 'v2.8' // use graph api version 2.8
     });
-    console.log("여기는갑니까########################################################3");
     FB.getLoginStatus(function(response) {
         statusChangeCallback(response);
     });
 
 };
-console.log("여기는갑니까########################################################3");
 (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
@@ -57,7 +55,7 @@ function SucessAPI() {
         window.localStorage.fb_name = response.name;
         window.localStorage.loginCheck = 2; //1 : 오리지널, 2 : 페이스북, 3 : 카카오톡 로그인
         alert(window.localStorage.fb_name);
-        location.href='http://byeongkwan.dothome.co.kr/join_FB.html';
+        location.href='http://byeongkwan.dothome.co.kr/FBCheck.html';
     });
 };
 $('#button_signup_facebook').click(function () {

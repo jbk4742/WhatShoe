@@ -5,7 +5,6 @@
     $(document).ready(function(){
         Kakao.init("1354531609e350fbd024b14f61d98d54");
         function getKakaotalkUserProfile(){
-            console.log("안됨?");
             Kakao.API.request({
                 url: '/v1/user/me',
                 success: function(res) {
@@ -29,7 +28,6 @@
                 success: function(authObj) {
                     getKakaotalkUserProfile();
                     createKakaotalkLogout();
-                    console.log("안됨?");
                 },
                 fail: function(err) {
                     console.log(err);
