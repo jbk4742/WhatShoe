@@ -97,6 +97,12 @@
         "cordova-plugin-htj-kakaotalk": {
             "KAKAO_APP_KEY": "1354531609e350fbd024b14f61d98d54",
             "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-fcm": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-velda-devicefeedback": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     },
     "dependent_plugins": {},
@@ -501,6 +507,22 @@
             "clobbers": [
                 "KakaoTalk"
             ]
+        },
+        {
+            "file": "plugins/cordova-plugin-fcm/www/FCMPlugin.js",
+            "id": "cordova-plugin-fcm.FCMPlugin",
+            "pluginId": "cordova-plugin-fcm",
+            "clobbers": [
+                "FCMPlugin"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-velda-devicefeedback/DeviceFeedback.js",
+            "id": "cordova-plugin-velda-devicefeedback.DeviceFeedback",
+            "pluginId": "cordova-plugin-velda-devicefeedback",
+            "clobbers": [
+                "window.plugins.deviceFeedback"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -518,6 +540,8 @@
         "cordova-plugin-splashscreen": "4.0.1",
         "cordova-plugin-wkwebview-engine": "1.1.1",
         "cordova-plugin-facebook4": "1.7.4",
-        "cordova-plugin-htj-kakaotalk": "1.0.0"
+        "cordova-plugin-htj-kakaotalk": "1.0.0",
+        "cordova-plugin-fcm": "2.1.1",
+        "cordova-plugin-velda-devicefeedback": "0.0.2"
     }
 }

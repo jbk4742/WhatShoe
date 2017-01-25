@@ -41,19 +41,19 @@ $('#logout_btn').click(function() {
     }
 });
 $('#dialog').dialog({
-    title:'다이얼로그',
+    title:'Dialog',
     autoOpen:false,
     width:600,
     modal:true,
     backgroundColor: '#252525',
     buttons:[
         {
-            text: "등록",
+            text: "Register",
             click: function() {
                 document.getElementById('test_form').submit();
             }
         }, {
-            text: "닫기",
+            text: "Close",
             click: function () {
                 $(this).dialog("close");
             }

@@ -42,6 +42,14 @@
     <access origin="https://*.kakao.com" />
     <access origin="https://*.kakao.co.kr" />
     <access origin="https://*.kakaocdn.net" />
+    <feature name="FCMPlugin">
+        <param name="android-package" value="com.gae.scaffolder.plugin.FCMPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="DeviceFeedback">
+        <param name="android-package" value="cz.Velda.cordova.plugin.devicefeedback.DeviceFeedback" />
+        <param name="onload" value="true" />
+    </feature>
     <name>test</name>
     <description>
         A blank PhoneGap app.

@@ -39,13 +39,7 @@ $('#order_btn').click(function () {
         alert("아이디가 입력되지 않았습니다");
         return false;
     } else {
-        if (!/^[a-zA-Z0-9]{6,12}$/.test(check_id)) {
-            alert("숫자와 영문 혼합 4~10자리 사용해야함");
-            return false;
-        }
-        else {
             check_count++;
-        }
     }
     if(!check_phone){
         alert("전화번호가 입력되지 않았습니다.");
@@ -76,16 +70,16 @@ function checkProduct(){
         result[i] = window.localStorage.getItem("item"+i);
         switch (result[i]){
             case '1':
-                string = " 샤넬";
+                string = " Chanel";
                 break;
             case '2':
-                string+=" 루이까또즈";
+                string+=" Louis Quatorz";
                 break;
             case '3':
-                string +=" 버버리";
+                string +=" Burberry";
                 break;
             case '4':
-                string +=" 닥스";
+                string +=" DAKS";
                 break;
         }
     }
@@ -95,14 +89,14 @@ $('#method_btn').click(function () {
     $("#dialog").dialog("open");
 });
 $('#dialog').dialog({
-    title:'다이얼로그',
+    title:'DIALOG',
     autoOpen:false,
     width:600,
     modal:true,
     backgroundColor: '#252525',
     buttons:[
         {
-            text: "확인",
+            text: "OK",
             click: function() {
                 var checkRadio = document.getElementsByName('paymethod');
 

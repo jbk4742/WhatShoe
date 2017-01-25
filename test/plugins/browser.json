@@ -15,6 +15,12 @@
         "cordova-plugin-htj-kakaotalk": {
             "KAKAO_APP_KEY": "1354531609e350fbd024b14f61d98d54",
             "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-fcm": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-velda-devicefeedback": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     },
     "dependent_plugins": {}

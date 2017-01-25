@@ -322,6 +322,22 @@ module.exports = [
         "clobbers": [
             "KakaoTalk"
         ]
+    },
+    {
+        "id": "cordova-plugin-fcm.FCMPlugin",
+        "file": "plugins/cordova-plugin-fcm/www/FCMPlugin.js",
+        "pluginId": "cordova-plugin-fcm",
+        "clobbers": [
+            "FCMPlugin"
+        ]
+    },
+    {
+        "id": "cordova-plugin-velda-devicefeedback.DeviceFeedback",
+        "file": "plugins/cordova-plugin-velda-devicefeedback/DeviceFeedback.js",
+        "pluginId": "cordova-plugin-velda-devicefeedback",
+        "clobbers": [
+            "window.plugins.deviceFeedback"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -338,7 +354,9 @@ module.exports.metadata =
     "cordova-plugin-whitelist": "1.3.1",
     "cordova-plugin-device": "1.1.4",
     "cordova-plugin-facebook4": "1.7.4",
-    "cordova-plugin-htj-kakaotalk": "1.0.0"
+    "cordova-plugin-htj-kakaotalk": "1.0.0",
+    "cordova-plugin-fcm": "2.1.1",
+    "cordova-plugin-velda-devicefeedback": "0.0.2"
 };
 // BOTTOM OF METADATA
 });

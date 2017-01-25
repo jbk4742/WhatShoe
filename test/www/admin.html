@@ -17,32 +17,33 @@
             border: 1px solid #bcbcbc;
             text-align: center;
         }
-        table tr td a :hover {
+        tr:hover {
+            background-color: yellow;
+            color: #252525;
             cursor: pointer;
         }
     </style>
 </head>
 <body>
-<h4>주문 고객 목록</h4>
+<h4>Order customer list</h4>
 <table>
     <thead>
-    <tr><th>주문번호</th><th>아이디</th><th>상품명</th><th>주문날짜</th></tr>
+    <tr><th>Order Number</th><th>ID</th><th>Product</th><th>Order date</th></tr>
     </thead>
 <?php
     include("php/adminDB.php");
     for($j = 0 ; $j< $i; $j++){
 ?>
 
-    <tr><td><a id=_index<?php echo $j?> style="cursor: pointer;"><?php echo $index[$j]?> </a></td><td><a id=_id<?php echo $j?> style="cursor: pointer;"> <?php echo $id[$j] ?></a></td><td><?php echo $product[$j] ?></td><td><?php echo $date[$j] ?></td></tr>
+    <tr id=_index<?php echo $j?> style="cursor: pointer;"><td><?php echo $index[$j]?></td><td><?php echo $id[$j] ?></td><td><?php echo $product[$j] ?></td><td><?php echo $date[$j] ?></td></tr>
 
 
 <?php
     }
 ?>
 </table>
-<h6>index 클릭하면 해당 정보로 이동.</h6>
-<h6>id 클릭하면 회원 정보로 이동.</h6>
-<form id="admin_index_form" action="php/admin_list.php" method="post">
+<h6>Click to go to that information.</h6>
+<form id="admin_index_form" action="admin_list.html" method="post">
         <input type="text" name="admin_id" style="display: none" id="admin_id">
         <input type="text" name="admin_pro" style="display: none" id="admin_pro">
         <input type="text" name="admin_index" style="display: none" id="admin_index">
@@ -63,11 +64,7 @@
                 document.getElementById('admin_pro').value = window.localStorage.product<?php echo $j?>;
                 document.getElementById('admin_index_form').submit();
             });
-            $('#_id<?php echo $j?>').click(function () {
-                window.localStorage._id<?php echo $j?> = "<?php echo $id[$j]?>";
-                document.getElementById('adminInfo_id').value = window.localStorage._id<?php echo $j?>;
-                document.getElementById('admin_id_form').submit();
-            });
+
     <?php
         }
                 ?>
